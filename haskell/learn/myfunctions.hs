@@ -54,4 +54,46 @@ replIntvl = replicate 3 10 -- res [10, 10, 10]
 
 -- List generators
 
+chgen = [x * 2 | x <- [1..10]]
+prechgen = [x * 2 | x <- [1..10], x * 2 >= 12]
+premodgen = [x | x <- [50..100], mod x 7 == 3]
 
+boomBang xs = [if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]
+
+multipregen = [x | x <- [10..20], x /= 13, x /= 15, x /= 19]
+
+addsetgen = [x + y | x <- [1..3], y <- [10, 100, 1000]]
+mulsetgen = [x * y | x <- [2, 5, 10], y <- [8, 10 ,11]]
+premulsetgen = [x * y | x <- [2, 5, 10], y <- [8, 10 ,11], x * y > 50]
+
+nouns = ["man", "animal", "pen"]
+adjs = ["happy", "strange", "awful"]
+setnounsadjs xs ys = [x ++ " " ++ y | x <- xs, y <- ys]
+
+mylen xs = sum [1 | _ <- xs]
+
+removeNotUpperCase xs = [x | x <- xs, elem x ['A'..'Z']]
+
+xxs = [[1..10], [3..7]]
+removeOddGen p1 = [[x | x <- xs, even x] | xs <- p1]
+
+-- Tuples
+
+t1 = (1, 3)
+t2 = (3, 'a', "hello")
+
+listOfTuples = [(1,2,3), (3,4,5)]
+-- listOfTuples = [(1,2,3), (3,5) -- got error because sizes are not compatible
+
+firstT = fst (1, 2)
+secondT = snd (1, 2)
+
+-- zip functions
+zipNumbers = zip [1, 2, 3] [5, 5, 5]
+zipDifferent = zip [1..5]["One", "Two", "Three", "Four", "Five"]
+zipSizes = zip [1..2]["1","3","4","123"]
+zipInfNum = zip [1..]["Orange", "Blue", "White"]
+
+-- task
+-- len < 10, perim = 24, one angle eqauls 90 degrees
+triples = [(a, b, c)| c <- [1..10], a <- [1..c], b <- [1..a] ,a^2+b^2 == c^2, a + b + c == 24]
