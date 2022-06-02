@@ -8,7 +8,7 @@
 ## How to use it
 
 ```(shell)
-ghci main.hs
+ghc main.hs
 ./main
 > 1 1 +
 2.0
