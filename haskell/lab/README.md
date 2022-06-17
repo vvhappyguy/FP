@@ -21,4 +21,9 @@ ghc main.hs
 - [x] Translate infix notaion to RPN (used [Shunting_yard](https://en.wikipedia.org/wiki/Shunting_yard_algorithm) algorithm)
 - [x] Add support for round bracket
 --
-- [ ] Add some special functions of (maybe?) [Forth](https://en.wikipedia.org/wiki/Forth_(programming_language))
+- [ ] Add some special functions of (maybe?) 
+
+Forth links:
+[Wikipedia](https://en.wikipedia.org/wiki/Forth_(programming_language))
+[Progopedia](http://progopedia.ru/language/forth/)
+[Xakep](https://xakep.ru/2019/07/24/forth/)
